@@ -89,12 +89,12 @@ namespace campo_minado
             Console.WriteLine("Entre com o tamanho de N: ");
             int n = int.Parse(Console.ReadLine());
             matriz = new int[n, n];
-            inicia(matriz, n);
             gera_bombas(matriz, n);
 
             char play = 'S';
             while (play == 'S')
             {
+                inicia(matriz, n);
                 int score = play_game(matriz, n);
                 exibe_matriz(matriz, n);
                 Console.WriteLine("Score: {0}", score);
