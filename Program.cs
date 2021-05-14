@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace campo_minado
 {
@@ -24,7 +25,7 @@ namespace campo_minado
                 Console.WriteLine();
             }
         }
-
+        // Inicia a matriz com ZEROS.
         static void inicia(int[,] matriz, int n){
             for (int i = 0; i < n; i++)
             {
@@ -34,7 +35,7 @@ namespace campo_minado
                 }
             }
         }
-        static void gera_bombas(int[,] matriz, int n)
+        static int gera_bombas(int[,] matriz, int n)
         {
             Console.Clear();
             var rand = new Random();
@@ -48,23 +49,27 @@ namespace campo_minado
             {
                 p1 = rand.Next(0, n);
                 p2 = rand.Next(0, n);
+                // Adiciona -2 nos locais que estaram as bombas.
                 if (matriz[p1,p2] == 0){
-                    matriz[p1,p2] = -2;
+                    matriz[p1,p2] = -1;
                     i++;
                 }
             }
             Console.Clear();
+            return num_bombas;
         }
 
-        static int play_game(int[,] matriz, int n)
+        static int play_game(int[,] matriz, int n, int num_bombas)
         {
             int score=0, p1, p2, error_num=0;
             int[,] tela;
+            // Matriz para exibir sem monstrar os locais das bombas.
             tela = new int[n, n];
             inicia(tela, n);
 
             while (error_num != 3){
                 exibe_matriz(tela, n);
+                Console.WriteLine("Você possui mais {0} chances!", 3 - error_num);
                 Console.Write("Entre a primeira posicao: ");
                 p1 = int.Parse(Console.ReadLine());
 
@@ -73,33 +78,48 @@ namespace campo_minado
 
                 if (matriz[p1,p2] == 0){
                     matriz[p1,p2] = 3;
-                    tela[p1,p2] = 3;
-                    score += 3;
-                } else if (matriz[p1,p2] == -2){
-                    score += -2;
-                    tela[p1,p2] = -2;
+                    tela[p1,p2] = matriz[p1,p2];
+                    score += matriz[p1,p2];
+
+                } else if (matriz[p1,p2] == -1){
+                    matriz[p1,p2] = -2;
+                    tela[p1,p2] = matriz[p1,p2];
+                    score += matriz[p1,p2];
                     error_num++;
+
+                } else {
+                    Console.WriteLine("Posição já selecionada");
+                    Thread.Sleep(2000);
+                }
+
+                if ((n * n - num_bombas) * 3 == score){
+                    exibe_matriz(matriz, n);
+                    Console.WriteLine("JOGO ZERADO!");
+                    break;
                 }
             }
+            exibe_matriz(matriz, n);
+            Console.WriteLine("Você acertou 3 bombas.");
             return score;
         }
         static void Main(string[] args)
         {
             int[,] matriz;
-            Console.WriteLine("Entre com o tamanho de N: ");
-            int n = int.Parse(Console.ReadLine());
-            matriz = new int[n, n];
-            gera_bombas(matriz, n);
 
             char play = 'S';
             while (play == 'S')
             {
+                Console.Clear();
+                Console.Write("Entre com o tamanho de N: ");
+                int n = int.Parse(Console.ReadLine());
+                matriz = new int[n, n];
                 inicia(matriz, n);
-                int score = play_game(matriz, n);
-                exibe_matriz(matriz, n);
+                int num_bombas = gera_bombas(matriz, n);
+
+                int score = play_game(matriz, n, num_bombas);
                 Console.WriteLine("Score: {0}", score);
                 Console.Write("Jogar Novamente? <S> se sim: ");
-                play = char.Parse(Console.ReadLine());
+                play = char.Parse(Console.ReadLine().ToUpper());
             }
             
             //Problema do campo minado
