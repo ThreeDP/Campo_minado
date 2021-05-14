@@ -14,3 +14,19 @@ E:\ESTUDOS\LINGUAGEM DE PROGRAMAÇÃO 2\CAMPO MINADO\campo_minado\obj\Debug\net5
 E:\ESTUDOS\LINGUAGEM DE PROGRAMAÇÃO 2\CAMPO MINADO\campo_minado\obj\Debug\net5.0\ref\campo_minado.dll
 E:\ESTUDOS\LINGUAGEM DE PROGRAMAÇÃO 2\CAMPO MINADO\campo_minado\obj\Debug\net5.0\campo_minado.pdb
 E:\ESTUDOS\LINGUAGEM DE PROGRAMAÇÃO 2\CAMPO MINADO\campo_minado\obj\Debug\net5.0\campo_minado.genruntimeconfig.cache
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\campo_minado.exe
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\campo_minado.deps.json
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\campo_minado.runtimeconfig.json
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\campo_minado.runtimeconfig.dev.json
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\campo_minado.dll
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\ref\campo_minado.dll
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\bin\Debug\net5.0\campo_minado.pdb
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.csprojAssemblyReference.cache
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.GeneratedMSBuildEditorConfig.editorconfig
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.AssemblyInfoInputs.cache
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.AssemblyInfo.cs
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.csproj.CoreCompileInputs.cache
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.dll
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\ref\campo_minado.dll
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.pdb
+E:\ESTUDOS\IFSP-2021\LINGUAGEM DE PROGRAMAÇÃO II\Campo_minado\obj\Debug\net5.0\campo_minado.genruntimeconfig.cache
