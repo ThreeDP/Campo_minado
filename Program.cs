@@ -68,7 +68,7 @@ namespace campo_minado
             inicia(tela, n);
 
             while (error_num != 3){
-                exibe_matriz(matriz, n);
+                exibe_matriz(tela, n);
                 Console.WriteLine("Você possui mais {0} chances!", 3 - error_num);
                 Console.Write("Entre a primeira posicao: ");
                 p1 = int.Parse(Console.ReadLine());
@@ -109,7 +109,8 @@ namespace campo_minado
             char play = 'S';
             while (play == 'S')
             {
-                Console.WriteLine("Entre com o tamanho de N: ");
+                Console.Clear();
+                Console.Write("Entre com o tamanho de N: ");
                 int n = int.Parse(Console.ReadLine());
                 matriz = new int[n, n];
                 inicia(matriz, n);
