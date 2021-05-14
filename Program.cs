@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading;
 
 namespace campo_minado
 {
@@ -50,7 +51,7 @@ namespace campo_minado
                 p2 = rand.Next(0, n);
                 // Adiciona -2 nos locais que estaram as bombas.
                 if (matriz[p1,p2] == 0){
-                    matriz[p1,p2] = -2;
+                    matriz[p1,p2] = -1;
                     i++;
                 }
             }
@@ -68,6 +69,7 @@ namespace campo_minado
 
             while (error_num != 3){
                 exibe_matriz(matriz, n);
+                Console.WriteLine("Você possui mais {0} chances!", 3 - error_num);
                 Console.Write("Entre a primeira posicao: ");
                 p1 = int.Parse(Console.ReadLine());
 
@@ -76,12 +78,18 @@ namespace campo_minado
 
                 if (matriz[p1,p2] == 0){
                     matriz[p1,p2] = 3;
-                    tela[p1,p2] = 3;
-                    score += 3;
-                } else if (matriz[p1,p2] == -2){
-                    score += -2;
-                    tela[p1,p2] = -2;
+                    tela[p1,p2] = matriz[p1,p2];
+                    score += matriz[p1,p2];
+
+                } else if (matriz[p1,p2] == -1){
+                    matriz[p1,p2] = -2;
+                    tela[p1,p2] = matriz[p1,p2];
+                    score += matriz[p1,p2];
                     error_num++;
+
+                } else {
+                    Console.WriteLine("Posição já selecionada");
+                    Thread.Sleep(2000);
                 }
 
                 if ((n * n - num_bombas) * 3 == score){
